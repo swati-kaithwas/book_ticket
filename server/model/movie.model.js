@@ -20,9 +20,9 @@ const movie = new Schema(
     movie_images: {
       type: String,
     },
-    seats: {
-      type: Array,
-    },
+    // seats: {
+    //   type: Array,
+    // },
   },
   { timestamps: true }
 );

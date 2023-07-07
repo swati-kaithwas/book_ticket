@@ -28,16 +28,13 @@ const upload = multer({
   storage: storage,
 
   fileFilter: function (req, file, cb) {
-    if (file.mimetype === "image/png" || file.mimetype === "image/jpeg") {
+    if (file.mimetype === "image/png" || file.mimetype === "image/jpeg" || file.mimetype === "image/jpg") {
       cb(null, true);
     } else {
       console.log("only jpg & png file supported !");
       callbackPromise(null, false);
     }
-  },
-  limits: {
-    fileSize: 1024 * 1024 * 2,
-  },
+  }
 });
 
 module.exports = { upload };

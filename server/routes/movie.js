@@ -14,5 +14,5 @@ router.get('/', function(req, res, next) {
 });
 router.post("/create",upload.single("movie_images"),moviecontroller.createMovie);
 router.get("/getall",moviecontroller.getAllMovie);
-router.post("/getbyid",moviecontroller.getById)
+router.get("/getbyid/:id",moviecontroller.getById)
 module.exports = router;

@@ -6,18 +6,17 @@ const createMovie = async (req, res) => {
     2. movie_name , movie_type,director name and movie_images , is required
     */
   try {
-    let { movie_name, director_name, type_of_movie ,seats} = req.body;
+    let { movie_name, director_name, type_of_movie} = req.body;
     let movie_images = req.file;
-    if (!type_of_movie || !director_name||! movie_name||!seats)
+    if (!type_of_movie || !director_name||! movie_name || !movie_images)
       return sendResponse(res, 400, {
         status: false,
-        message: "movie name, movie type  and director name is required!",
+        message: "movie name, movie type  and director name and movie image is required!",
       });
     const obj = {
     movie_name: movie_name,
     type_of_movie:type_of_movie,
-    director_name: director_name,
-    seats:seats
+    director_name: director_name
     };
     
     if(req.file!=undefined){
@@ -79,7 +78,7 @@ const getAllMovie = async (req, res) => {
       2. using id find car
       */
     try {
-      const { id } = req.body;
+      const { id } = req.params;
       if (!id)
         return sendResponse(res, 400, {
           status: false,
