@@ -10,7 +10,7 @@ const Movie = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/movie/getall");
+      const response = await fetch("https://book-ticket-hyxg.vercel.app/movie/getall");
       const json = await response.json();
       console.log("data", json.data?.content);
 

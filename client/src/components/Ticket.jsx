@@ -21,7 +21,7 @@ const Ticket = () => {
   // Function to handle movie selection
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/movie/getById/${id}`);
+      const response = await fetch(`https://book-ticket-hyxg.vercel.app/movie/getById/${id}`);
       console.log(response);
       const json = await response.json();
       console.log("data", json.data);
@@ -55,7 +55,7 @@ const Ticket = () => {
         seatId: selectedSeats._id
       }
 
-      await axios.post("http://localhost:3001/ticket/createticket", payload, {
+      await axios.post("https://book-ticket-hyxg.vercel.app/ticket/createticket", payload, {
         headers: {
           Authorization: sessionStorage.getItem('token')
         }
@@ -82,7 +82,7 @@ const Ticket = () => {
 
   const fetchTickets = async () => {
     try {
-      const response = await fetch("http://localhost:3001/seats");
+      const response = await fetch("https://book-ticket-hyxg.vercel.app/seats");
       const json = await response.json();
       setSeats(json.data);
     } catch (err) {

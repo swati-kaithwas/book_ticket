@@ -22,8 +22,8 @@ const createMovie = async (req, res) => {
     if(req.file!=undefined){
       console.log("req",req.file)
       var image= req.file.filename;
-         obj.movie_images = "http://localhost:3001/"+"moviesimages/"+ image
-      
+        //  obj.movie_images = "http://localhost:3001/"+"moviesimages/"+ image
+         obj.movie_images = "https://book-ticket-hyxg.vercel.app/"+"moviesimages/"+ image
     }
     const createcar = await Movieservice.createmovie(obj);
     if (!createcar)

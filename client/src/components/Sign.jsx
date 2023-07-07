@@ -12,7 +12,7 @@ const Sign = () => {
 
   const handleFormSubmit = () => {
     axios
-      .post("http://localhost:3001/users/signup", data)
+      .post("https://book-ticket-hyxg.vercel.app/users/signup", data)
       .then((res) => {
         console.log({ res });
         if (res.data.status) {
