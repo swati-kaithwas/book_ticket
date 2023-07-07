@@ -11,7 +11,6 @@ const Login = () => {
       .post("http://localhost:3001/users/login", data)
       .then((res) => {
         if (res.status == 200) {
-
           swal(`${res.data.message}`);
           sessionStorage.setItem('token',res.data.token);
           navigate("/movie");

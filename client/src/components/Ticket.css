@@ -14,11 +14,18 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
-  
   .movie-option {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+                color: white
+                ;
   }
   
   .select-movie-button {
@@ -36,11 +43,12 @@
   
   .seat-option {
     margin-bottom: 10px;
+    margin-left: 20px;
   }
   
   .seat-row {
     display: flex;
-    gap: 10px;
+    gap: 15px;
   }
   
   .seat-button {
@@ -50,6 +58,7 @@
     background-color: #e0e0e0;
     font-size: 14px;
     cursor: pointer;
+    border-radius: 2px;
   }
   
   .seat-button.selected {
@@ -90,3 +99,75 @@
     text-align: center;
     margin-top: 10px;
   }
+
+/* Design For Best experience */
+.btn-group{
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+ }
+ 
+.confirm-btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 3px solid rgb(20, 156, 54);
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+ }
+ 
+ .confirm-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 156, 54);
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .confirm-btn:hover::before {
+  transform: translateX(0);
+ }
+
+ .cancel-btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 3px solid rgb(141, 23, 43);
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+ }
+ .cancel-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(141, 23, 43);
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .cancel-btn:hover::before {
+  transform: translateX(0);
+ }

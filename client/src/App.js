@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/sign-up" element={<Sign/>} />
         <Route exact path="/movie" element={<PrivateRoute><Movie/></PrivateRoute>} />
         
-        <Route exact path="/ticket" element={<PrivateRoute><Ticket/></PrivateRoute>} />
+        <Route exact path="/ticket/:id" element={<PrivateRoute><Ticket/></PrivateRoute>} />
         </Routes>
     </div>
   );
