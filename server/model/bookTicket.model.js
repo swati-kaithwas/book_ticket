@@ -1,7 +1,5 @@
 
-// NOT IN USE 
-// PLEASE DELETE IT ASAP IT MAY BE HARM YOUR PROJECT
-// Directed By Biswajit Das
+
 
 const { Schema, model } = require("mongoose");
 const Movie = require("./movie.model");
